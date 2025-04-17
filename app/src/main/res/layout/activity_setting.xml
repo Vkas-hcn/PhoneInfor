@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conSet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_s">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:drawableStart="@drawable/icon_direction"
+            android:text="Settings"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_lg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:drawableTop="@drawable/icon_set_logo"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_main_1"
+            android:drawableStart="@drawable/icon_share_settings"
+            android:drawableEnd="@drawable/icon_direction_set"
+            android:drawablePadding="9dp"
+            android:paddingHorizontal="22dp"
+            android:paddingVertical="17dp"
+            android:text="Share"
+            android:textColor="#FF222222"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lg"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_main_1"
+            android:drawableStart="@drawable/icon_privacy_settings"
+            android:drawableEnd="@drawable/icon_direction_set"
+            android:drawablePadding="9dp"
+            android:paddingHorizontal="22dp"
+            android:paddingVertical="17dp"
+            android:text="Privacy Policy"
+            android:textColor="#FF222222"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_share" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -6,4 +6,37 @@
     </style>
 
     <style name="Theme.PhoneInfor" parent="Base.Theme.PhoneInfor" />
+    <declare-styleable name="SmartProgressBar">
+        <attr format="integer" name="spb_max"/>
+        <attr format="integer" name="spb_progress"/>
+        <attr format="color" name="spb_progress_start_color"/>
+        <attr format="color" name="spb_progress_center_color"/>
+        <attr format="color" name="spb_progress_end_color"/>
+        <attr format="reference" name="spb_progress_colors"/>
+        <attr format="reference" name="spb_progress_positions"/>
+        <attr format="color" name="spb_progress_bar_bg_color"/>
+        <attr format="boolean" name="spb_progress_bar_bg_gradient"/>
+        <attr format="float" name="spb_progress_bar_bg_alpha"/>
+        <attr format="boolean" name="spb_show_percent_text"/>
+        <attr format="boolean" name="spb_show_percent_sign"/>
+        <attr format="color" name="spb_percent_text_color"/>
+        <attr format="dimension" name="spb_percent_text_size"/>
+        <attr format="color" name="spb_border_color"/>
+        <attr format="dimension" name="spb_border_width"/>
+        <attr format="dimension" name="spb_radius"/>
+        <attr format="boolean" name="spb_clockwise"/>
+        <attr format="dimension" name="spb_top_left_radius"/>
+        <attr format="dimension" name="spb_top_right_radius"/>
+        <attr format="dimension" name="spb_bottom_left_radius"/>
+        <attr format="dimension" name="spb_bottom_right_radius"/>
+        <attr format="enum" name="spb_shape_style">
+            <enum name="HORIZONTAL" value="0"/>
+            <enum name="VERTICAL" value="1"/>
+            <enum name="RING" value="2"/>
+            <enum name="SECTOR" value="3"/>
+        </attr>
+        <attr format="boolean" name="spb_animated"/>
+        <attr format="integer" name="spb_animated_duration"/>
+        <attr format="boolean" name="spb_show_shadow"/>
+    </declare-styleable>
 </resources>

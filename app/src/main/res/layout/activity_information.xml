@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="papaInt"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conFirst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_s">
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/icon_direction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDeviceTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text="Device"
+            android:textColor="@{papaInt==1?@color/white:@color/tvAn}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_back"
+            app:layout_constraintEnd_toStartOf="@+id/tvSystem"
+            app:layout_constraintStart_toEndOf="@+id/img_back"
+            app:layout_constraintTop_toTopOf="@+id/img_back" />
+
+        <TextView
+            android:id="@+id/tvSystem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text="System"
+            android:textColor="@{papaInt==2?@color/white:@color/tvAn}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDeviceTitle"
+            app:layout_constraintEnd_toStartOf="@+id/tvCpu"
+            app:layout_constraintStart_toEndOf="@+id/tvDeviceTitle"
+            app:layout_constraintTop_toTopOf="@+id/tvDeviceTitle" />
+
+        <TextView
+            android:id="@+id/tvCpu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text="CPU"
+            android:textColor="@{papaInt==3?@color/white:@color/tvAn}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSystem"
+            app:layout_constraintEnd_toStartOf="@+id/tvBattery"
+            app:layout_constraintStart_toEndOf="@+id/tvSystem"
+            app:layout_constraintTop_toTopOf="@+id/tvSystem" />
+
+        <TextView
+            android:id="@+id/tvBattery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text="Battery"
+            android:textColor="@{papaInt==4?@color/white:@color/tvAn}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCpu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCpu"
+            app:layout_constraintTop_toTopOf="@+id/tvCpu" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="@{papaInt==1?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_back">
+
+            <include
+                android:id="@+id/in_device_l"
+                layout="@layout/in_device" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="@{papaInt==2?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_back">
+
+            <include
+                android:id="@+id/in_system_l"
+                layout="@layout/in_system" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="@{papaInt==3?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_back">
+            <include
+                android:id="@+id/in_cpu_l"
+                layout="@layout/in_cpu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="@{papaInt==4?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_back">
+            <include
+                android:id="@+id/in_battery_l"
+                layout="@layout/in_battery" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
